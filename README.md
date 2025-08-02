@@ -113,9 +113,21 @@ PINECONE_API_KEY=your_key
 📄 License
 Apache 2.0
 
+Backend:
+Single endpoint (/summarize-pdf)
+Basic PDF validation
+Simple error handling
+Fixed concurrency (no parallel processing)
 
-### Key Features of This README:  
-1. **Modular Sections**: Easy to navigate (tech stack, setup, roadmap).  
-2. **Tables**: Clear comparison of models/agents.  
-3. **Code Blocks**: Ready-to-run installation commands.  
-4. **Future Goals**: Transparent roadmap for contributors.  
+Frontend:
+Single file upload only
+Basic drag-and-drop interface
+Minimal error display
+Simple loading state
+
+cd backend
+source venv/bin/activate  # or .\venv\Scripts\activate on Windows
+uvicorn app.main:app --reload --port 8000
+
+cd frontend
+npm run dev
